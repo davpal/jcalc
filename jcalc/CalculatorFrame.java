@@ -6,6 +6,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class CalculatorFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	JPanel resultPane, buttonPane, mainPane;
 	JButton[] buttons;
 	JTextField resultField;
