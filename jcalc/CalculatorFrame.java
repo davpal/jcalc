@@ -19,28 +19,17 @@ public class CalculatorFrame extends JFrame {
 	}
 	
 	private void initComponents(){
-		buttons = new JButton[]{
-			new JButton("Sqrt"),
-			new JButton("MOD"),
-			new JButton("+/-"),
-			new JButton("C"),
-			new JButton("7"),
-			new JButton("8"),
-			new JButton("9"),
-			new JButton("/"),
-			new JButton("4"),
-			new JButton("5"),
-			new JButton("6"),
-			new JButton("*"),
-			new JButton("1"),
-			new JButton("2"),
-			new JButton("3"),
-			new JButton("-"),
-			new JButton("0"),
-			new JButton("."),
-			new JButton("="),
-			new JButton("+")
+		String[] labels = new String[]{
+			"Sqrt", "MOD", "+/-", "C",
+			"7", "8", "9", "/",
+			"4", "5", "6", "*",
+			"1", "2", "3", "-",
+			"0", ".", "=", "+"
 		};
+		
+		buttons = new JButton[labels.length];
+		for(int i = 0; i < labels.length; ++i)
+			buttons[i] = new JButton(labels[i]);
 		
 		resultField = new JTextField(25);
 		resultField.setHorizontalAlignment(JTextField.RIGHT);
